@@ -16,6 +16,7 @@ print("Chain Height:", height)
 print("Epoch Number:", epoch)
 print("Blocks In Epoch:", blocksInEpoch)
 print("Blocks Until New Epoch:", blocksUntilNewEpoch)
+print("Epoch Completion: " + str((blocksInEpoch / 1024) * 100) + "%")
 
 votesYes = 0
 votesNo = 0
@@ -39,8 +40,8 @@ while (blocksInEpoch > 0):
         else:
             votesNo += 1
 
-
 print("\nVote Data")
+print("Votes Needed: 888\n")
 print("Votes Yes:", votesYes)
 print("Votes No:", votesNo)
 print("Percent Yes: " + str((votesYes / (votesYes + votesNo) * 100)) + "%")
